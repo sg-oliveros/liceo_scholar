@@ -1,7 +1,9 @@
 import { Routes } from '@angular/router';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent }, // default route
+  { path: 'admin', component: AdminSidebarComponent} // path for the sidebar 
   // other routes here if needed
 ];
