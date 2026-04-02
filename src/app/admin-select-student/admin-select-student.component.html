@@ -1,0 +1,46 @@
+<div class="admin-container">
+    <div class="header-nav">
+    <button class="back-btn" (click)="goBack()">
+        <span class="material-icons">arrow_back</span>
+    </button>
+    <span class="breadcrumb">{{ studentName | uppercase }}</span>
+    </div>
+
+    <div class="profile-card">
+    <div class="avatar-container">
+        <div class="image-circle">
+        <img src="assets/samantha-profile.png" alt="Student Photo">
+        <button class="edit-badge">
+            <span class="material-icons">edit</span>
+        </button>
+        </div>
+    </div>
+
+    <div class="details-list">
+        <div class="detail-item">
+        <label>FULL NAME (LAST NAME, FIRST NAME, M.I.)</label>
+        <div class="info-box">{{ studentName }}</div>
+        </div>
+
+        <div class="detail-item">
+        <label>COURSE & YR LEVEL</label>
+        <div class="info-box">CISCO-BSIT 2ND YEAR</div>
+        </div>
+
+        <div class="detail-item">
+        <label>TYPE OF SCHOLARSHIP</label>
+        <div class="info-box">ACADEMIC SCHOLARSHIP (FULL SCHOLAR)</div>
+        </div>
+
+        <div class="detail-item">
+        <label>SEX</label>
+        <div class="info-box">FEMALE</div>
+        </div>
+
+        <div class="detail-item">
+        <label>AGE</label>
+        <div class="info-box">18 YEARS OLD</div>
+        </div>
+    </div>
+    </div>
+</div>

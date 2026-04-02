@@ -68,6 +68,16 @@ $gray-bg: #f5f5f5;
     }
 }
 
+.filter-btn {
+    background: #fff;
+    border: 0px;
+    border-radius: 6px;
+    padding: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .filter-overlay {
     position: absolute; /* This makes it float */
