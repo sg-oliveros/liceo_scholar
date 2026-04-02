@@ -7,7 +7,7 @@ export interface Student {
     name: string;
     course: string;
     scholarshipType: string;
-    status: 'Pending' | 'Approved' | 'Rejected' | 'Finished';
+    status: 'Pending' | 'Approved' | 'Rejected' | 'Finished'; //changed as per request
 }
 
 @Component({
