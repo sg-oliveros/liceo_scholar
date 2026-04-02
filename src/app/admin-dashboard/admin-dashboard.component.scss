@@ -1,164 +1,73 @@
+$sidebar-width: 250px;
 $sidebar-color: #8b0000;
-$bg-main: #f5f5f5;
-$card-bg: #ffffff;
-$text-muted: #888;
-$completed-color: #28a745;
-$profile-gradient: linear-gradient(to bottom, #8b0000, #d2691e);
 
 .dashboard-container {
   display: flex;
-  background-color: #e0e0e0; // Background behind the main content area
+  background-color: #f5f5f5;
   min-height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .main-content {
   flex: 1;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow-y: auto;
 }
 
 .top-row {
   display: flex;
   gap: 20px;
-  height: 400px;
+  height: 380px;
 }
 
 .card {
-  background: $card-bg;
-  border-radius: 12px;
+  background: white;
+  border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-// Activity Chart Styles
 .activity-chart {
   flex: 2;
-  h3 {
-    color: $text-muted;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  .chart-container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    height: 250px;
-    border-bottom: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    padding: 10px;
-
-    .bar {
-      width: 35px;
-      background-color: $sidebar-color;
-      border-radius: 2px 2px 0 0;
-    }
+  h3 { color: #888; font-size: 14px; margin-bottom: 20px; }
+  
+  .chart-wrapper {
+    position: relative;
+    height: 250px; // Essential for Chart.js
+    width: 100%;
   }
 }
 
-// Side Profile/Status Area
-.side-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+// Sidebar/Status Area
+.side-info { flex: 1; display: flex; flex-direction: column; gap: 15px; }
 
 .profile-card {
-  background: $profile-gradient;
+  background: linear-gradient(to bottom, #8b0000, #d2691e);
   border-radius: 25px;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   color: white;
-  flex: 1;
-
-  .profile-label { font-size: 12px; font-weight: bold; margin-bottom: 15px; }
-  .avatar {
-    width: 120px;
-    height: 120px;
-    background: white;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-  }
-  .name { font-size: 14px; font-weight: 500; }
+  .avatar { width: 100px; height: 100px; background: white; border-radius: 50%; margin: 0 auto 15px; }
 }
 
 .status-cards {
-  display: flex;
-  gap: 10px;
-  
-  .status-box {
-    flex: 1;
-    background: white;
-    padding: 15px;
-    border-radius: 15px;
-    text-align: center;
-    span { color: $text-muted; font-size: 12px; }
-    h2 { font-size: 32px; margin: 5px 0 0; color: #444; }
+  display: flex; gap: 15px;
+  .status-box { 
+    flex: 1; background: white; padding: 20px; border-radius: 15px; text-align: center;
+    h2 { font-size: 36px; margin: 5px 0 0; }
   }
 }
 
-// Table Section
-.table-card {
-  flex: 1;
-  .table-header {
-    margin-bottom: 15px;
-    .search-bar {
-      background: #eeeeee;
-      border-radius: 8px;
-      padding: 8px 15px;
-      display: flex;
-      align-items: center;
-      width: 250px;
-      input {
-        border: none;
-        background: transparent;
-        outline: none;
-        margin-left: 10px;
-        width: 100%;
-      }
-    }
-  }
-}
-
+// Table Styles
+.table-card { flex: 1; }
 .student-table {
-  width: 100%;
-  border-collapse: collapse;
-  
-  thead {
-    background-color: #9e9e9e;
-    color: white;
-    text-align: left;
-    th { padding: 12px; font-weight: 400; font-size: 13px; }
-  }
-
-  tbody td {
-    padding: 15px 12px;
-    font-size: 14px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .status-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 10px;
-    &.online { background-color: #00ff00; }
-  }
-
-  .status-text {
-    color: $completed-color;
-    font-weight: bold;
-  }
+  width: 100%; border-collapse: collapse; margin-top: 15px;
+  thead { background: #9e9e9e; color: white; th { padding: 12px; text-align: left; font-size: 13px; } }
+  tbody td { padding: 15px 12px; border-bottom: 1px solid #eee; font-size: 14px; }
 }
 
-.see-more {
-  text-align: center;
-  color: $text-muted;
-  font-size: 12px;
-  margin-top: 15px;
-  cursor: pointer;
-}
+.status-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; background: #00ff00; }
+.status-text { color: green; font-weight: bold; }
+.see-more { text-align: center; color: #888; font-size: 12px; margin-top: 15px; cursor: pointer; }
