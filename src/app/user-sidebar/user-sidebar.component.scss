@@ -38,7 +38,6 @@ ul {
     li {
     padding: 10px;
     margin-top: 10px;
-    cursor: pointer;
     border-radius: 5px;
 
     &.active {
@@ -46,7 +45,7 @@ ul {
     }
 
     &:hover {
-        background: darken($sidebar-color, 10%);
+        background: $sidebar-color;
     }
     }
 }
@@ -60,7 +59,7 @@ ul {
     margin-top: 20px;
 
     &:hover {
-    background: darken($sidebar-color, 20%);
+    background:$sidebar-color, 20%;
     }
 }
 }

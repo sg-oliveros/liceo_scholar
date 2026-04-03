@@ -19,10 +19,6 @@ export class StudentProfileComponent implements OnInit {
         sex: 'FEMALE',
         scholarshipType: 'ACADEMIC SCHOLARSHIP (FULL SCHOLAR)',
         profileImage: 'assets/profile.jpg',  // put your image here
-        requirements: [
-            { name: 'FORM 138', status: 'COMPLETED', date: '04/23/2025' },
-            { name: 'COMPLETE GRADES', status: 'COMPLETED', date: '04/23/2025' },
-        ]
     };
 
     constructor() { }
