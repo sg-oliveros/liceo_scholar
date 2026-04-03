@@ -1,7 +1,7 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminSidebarComponent } from '../admin-sidebar/admin-sidebar.component';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
+import { AdminSidebarComponent } from '../admin-sidebar/admin-sidebar.component';
 
 Chart.register(...registerables);
 
