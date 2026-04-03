@@ -13,7 +13,7 @@ export class AdminSelectStudentComponent implements OnInit {
     studentName: string | null = '';
 
     constructor(
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private location: Location
     ) {}
 
