@@ -3,12 +3,17 @@
 
 <div class="main-content">
 
+<div class="search-container">
     <div class="search-wrapper">
-    <input type="text" placeholder="Search" [(ngModel)]="searchTerm">
+    <span class="material-icons search-icon">search</span>
+    
+    <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" class="search-input">
     
     <button class="filter-btn" (click)="toggleFilter()">
-        <span class="material-icons">filter_list</span>
+    <span class="material-icons">filter_list</span>
     </button>
+    </div>
+</div>
 
      <div class="filter-overlay" *ngIf="isFilterOpen">
         <div class="filter-row">
@@ -48,7 +53,7 @@
 
         <div class="filter-actions">
             <button class="btn-cancel" (click)="toggleFilter()">Cancel</button>
-            <button class="btn-save" (click)="toggleFilter()">Save</button>
+            <button class="btn-save" (click)="toggleFilter()">Filter</button>
         </div>
 </div>
 
